@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Cekdika Autocare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .founder-card {
+            background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+            border: 2px solid #333;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .founder-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+        }
+        .founder-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #FFD700;
+            margin: 0 auto 20px;
+            display: block;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+        .value-card {
+            background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            height: 100%;
+            transition: all 0.3s;
+        }
+        .value-card:hover {
+            border-color: #FFD700;
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.1);
+        }
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #FFD700;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin: 40px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #FFD700, #FFA500);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+            border-radius: 10px;
+            border: 1px solid #333;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -23px;
+            top: 25px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #FFD700;
+            border: 3px solid #000;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+        .year-badge {
+            background: #FFD700;
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .team-member {
+            text-align: center;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+        .team-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 3px solid #FFD700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+            transition: all 0.3s;
+        }
+        .team-member:hover .team-img {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-car"></i> <span class="text-warning">CEKDIKA</span> AUTOCARE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-warning" href="contact.html#booking">BOOK NOW</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold text-center mb-3">ABOUT <span class="text-warning">CEKDIKA</span> AUTOCARE</h1>
+            <p class="lead text-center" style="color: #ccc;">Our story, mission, and the team behind your vehicle's transformation</p>
+            <div class="text-center mt-4">
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <div class="text-warning">
+                            <i class="fas fa-award me-2"></i> Certified Detailers
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="text-warning">
+                            <i class="fas fa-star me-2"></i> Premium Quality
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="text-warning">
+                            <i class="fas fa-users me-2"></i> Customer Focused
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-5" style="background: #0a0a0a;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="text-warning mb-4">OUR STORY</h2>
+                    <p class="lead mb-4" style="color: #ccc;">From passion to profession - that's the journey of Cekdika Autocare.</p>
+                    <p style="color: #aaa;" class="mb-4">
+                        Founded in 2021 by Dika, an automotive enthusiast with a keen eye for detail, Cekdika Autocare started 
+                        as a small side business with just basic equipment and a big dream. What began as washing friends' cars 
+                        in a driveway has grown into a professional automotive care service trusted by hundreds of customers.
+                    </p>
+                    <p style="color: #aaa;" class="mb-4">
+                        Our founder's journey on social media platforms like TikTok and Instagram helped share our passion with 
+                        the world, showcasing the art and science behind proper car detailing. Today, we combine traditional 
+                        craftsmanship with modern techniques to deliver exceptional results.
+                    </p>
+                    <div class="mt-4">
+                        <span class="badge bg-dark text-warning border border-warning me-2">Since 2021</span>
+                        <span class="badge bg-dark text-warning border border-warning me-2">500+ Cars</span>
+                        <span class="badge bg-dark text-warning border border-warning">98% Satisfaction</span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center">
+                        <img src="assets/images/cekdik.jpg" 
+                             alt="Our Workshop" class="img-fluid rounded shadow-lg border border-warning">
+                        <div class="mt-4">
+                            <h5 class="text-warning"><i class="fas fa-map-marker-alt me-2"></i>Based in Machang</h5>
+                            <p style="color: #888;">Serving customers throughout Malaysia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-5" style="background: #111;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="text-warning mb-3">Our Mission</h3>
+                        <p style="color: #aaa;">
+                            To deliver exceptional, personalized auto care services that enhance vehicle longevity, safety, 
+                            and customer satisfaction. We strive to exceed expectations with every detail, using premium 
+                            products and proven techniques to protect and enhance your vehicle.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="text-warning mb-3">Our Vision</h3>
+                        <p style="color: #aaa;">
+                            To become Malaysia's most trusted and preferred automotive care provider, recognized for our 
+                            commitment to quality, innovation, and customer-centric approach. We aim to set the standard 
+                            for automotive detailing in Southeast Asia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="py-5" style="background: #0a0a0a;">
+        <div class="container">
+            <div class="founder-card">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-center">
+                        <img src="assets/images/ui.jpg" 
+                             alt="Founder Dika" class="founder-img">
+                        <h3 class="text-warning mt-3">DIKA</h3>
+                        <p class="text-warning">Founder & Lead Detailer</p>
+                        <div class="mt-3">
+                            <a href="https://www.tiktok.com/@cekdikagency" class="btn btn-dark text-warning border border-warning me-2" target="_blank">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="https://www.instagram.com/cekdikagency" class="btn btn-dark text-warning border border-warning" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <h2 class="text-warning mb-4">MEET OUR FOUNDER</h2>
+                        <p style="color: #aaa;" class="mb-4">
+                            Dika's passion for cars began at a young age, influenced by his father who was a mechanic. 
+                            After years of studying automotive engineering and working in various car workshops, he 
+                            identified a gap in the market for premium, detail-oriented car care services.
+                        </p>
+                        <p style="color: #aaa;" class="mb-4">
+                            What sets Dika apart is his hands-on approach - he's personally involved in every major 
+                            detailing job and continuously experiments with new techniques and products to achieve 
+                            better results. His attention to detail and commitment to quality have earned Cekdika 
+                            Autocare its reputation for excellence.
+                        </p>
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <h5 class="text-warning mb-3"><i class="fas fa-graduation-cap me-2"></i>Qualifications</h5>
+                                <ul class="list-unstyled" style="color: #aaa;">
+                                    <li><i class="fas fa-check text-warning me-2"></i> Automotive Engineering Degree</li>
+                                    <li><i class="fas fa-check text-warning me-2"></i> Certified Detailer (IDAC)</li>
+                                    <li><i class="fas fa-check text-warning me-2"></i> 10+ Years Experience</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="text-warning mb-3"><i class="fas fa-trophy me-2"></i>Achievements</h5>
+                                <ul class="list-unstyled" style="color: #aaa;">
+                                    <li><i class="fas fa-check text-warning me-2"></i> 500+ Happy Customers</li>
+                                    <li><i class="fas fa-check text-warning me-2"></i> Featured on Social Media</li>
+                                    <li><i class="fas fa-check text-warning me-2"></i> 98% Satisfaction Rate</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="py-5" style="background: #111;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-warning mb-3">OUR CORE VALUES</h2>
+                <p class="lead" style="color: #ccc;">The principles that guide everything we do</p>
+            </div>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 class="text-warning mb-3">Quality</h4>
+                        <p style="color: #aaa;">We never compromise on quality, using only premium products and proven techniques to ensure the best results for your vehicle.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4 class="text-warning mb-3">Attention to Detail</h4>
+                        <p style="color: #aaa;">Every inch of your vehicle matters to us. We pay attention to what others miss, ensuring complete satisfaction.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4 class="text-warning mb-3">Customer Focus</h4>
+                        <p style="color: #aaa;">Your satisfaction is our priority. We listen to your needs and tailor our services to provide the best experience possible.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="text-warning mb-3">Integrity</h4>
+                        <p style="color: #aaa;">Honest pricing, transparent processes, and reliable service you can trust. We build relationships based on trust and respect.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="py-5" style="background: #0a0a0a;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-warning mb-3">OUR JOURNEY</h2>
+                <p class="lead" style="color: #ccc;">From humble beginnings to premium service provider</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="year-badge">2021</div>
+                    <h5 class="text-warning">Cekdika Autocare Founded</h5>
+                    <p style="color: #aaa;">Started as a small home-based business with basic equipment, focusing on friends and family vehicles.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="year-badge">Early 2022</div>
+                    <h5 class="text-warning">Social Media Breakthrough</h5>
+                    <p style="color: #aaa;">Gained recognition through TikTok and Instagram content showing detailing processes and transformations.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="year-badge">Mid 2022</div>
+                    <h5 class="text-warning">Professional Setup</h5>
+                    <p style="color: #aaa;">Invested in professional-grade equipment and established a dedicated workspace for premium services.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="year-badge">2023</div>
+                    <h5 class="text-warning">Expanded Services</h5>
+                    <p style="color: #aaa;">Added premium services like ceramic coating, paint correction, and engine bay detailing to our portfolio.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="year-badge">2024</div>
+                    <h5 class="text-warning">Digital Presence Launch</h5>
+                    <p style="color: #aaa;">Launch of professional website and expansion of service area throughout surrounding regions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-5" style="background: #111;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-warning mb-3">OUR TEAM</h2>
+                <p class="lead" style="color: #ccc;">Meet the professionals behind your vehicle's transformation</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="team-member">
+                        <img src="assets/images/ii.jpg" 
+                             alt="Team Member" class="team-img">
+                        <h5 class="text-warning mb-2">ALI</h5>
+                        <p class="mb-1" style="color: #FFD700;">Senior Detailer</p>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Cekdika Autocare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-card {
+            background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s;
+        }
+        .contact-card:hover {
+            border-color: #FFD700;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.1);
+        }
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #FFD700;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .contact-form {
+            background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+            border: 2px solid #333;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .form-control, .form-select {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            color: #fff;
+            padding: 12px;
+        }
+        .form-control:focus, .form-select:focus {
+            background-color: #1a1a1a;
+            border-color: #FFD700;
+            color: #fff;
+            box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+        }
+        .form-control::placeholder {
+            color: #666;
+        }
+        .booking-form-container {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            border: 2px solid #FFD700;
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 50px;
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.1);
+        }
+        .map-container {
+            border: 2px solid #FFD700;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.1);
+            height: 300px;
+        }
+        .opening-hours {
+            list-style: none;
+            padding: 0;
+        }
+        .opening-hours li {
+            padding: 12px 0;
+            border-bottom: 1px solid #333;
+            color: #ccc;
+        }
+        .opening-hours li:last-child {
+            border-bottom: none;
+        }
+        .time-slot {
+            display: inline-block;
+            padding: 5px 10px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 5px;
+            margin: 2px;
+            font-size: 0.9em;
+            color: #FFD700;
+        }
+        .service-option {
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: #1a1a1a;
+        }
+        .service-option:hover {
+            border-color: #FFD700;
+            background: #2d2d2d;
+        }
+        .service-option.selected {
+            border-color: #FFD700;
+            background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+        }
+        .accordion-button {
+            background-color: #1a1a1a;
+            color: #fff;
+            border: 1px solid #333;
+            padding: 15px;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #2d2d2d;
+            color: #FFD700;
+            border-color: #FFD700;
+        }
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+            border-color: #FFD700;
+        }
+        .accordion-body {
+            background-color: #1a1a1a;
+            color: #ccc;
+            border: 1px solid #333;
+            border-top: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-car"></i> <span class="text-warning">CEKDIKA</span> AUTOCARE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-warning" href="#booking">BOOK NOW</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold text-center mb-3">CONTACT <span class="text-warning">US</span></h1>
+            <p class="lead text-center" style="color: #ccc;">Get in touch with our team for inquiries or book an appointment</p>
+            <div class="text-center mt-4">
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <div class="text-warning">
+                            <i class="fas fa-phone me-2"></i> 24/7 Support
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="text-warning">
+                            <i class="fas fa-clock me-2"></i> Quick Response
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="text-warning">
+                            <i class="fas fa-calendar me-2"></i> Easy Booking
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-5" style="background: #0a0a0a;">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon mx-auto">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4 class="text-warning mb-3">Our Location</h4>
+                        <p style="color: #aaa;" class="mb-3">Machang , Kelantan</p>
+                        <p style="color: #888; font-size: 0.9rem;">We provide mobile services throughout Kelantan and surrounding areas. Contact us for on-site service availability.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon mx-auto">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4 class="text-warning mb-3">Phone Number</h4>
+                        <p style="color: #aaa;" class="mb-3">+60 12-345 6789</p>
+                        <p style="color: #888; font-size: 0.9rem;">Available 9 AM - 7 PM daily for calls and WhatsApp messages.</p>
+                        <a href="tel:+60123456789" class="btn btn-outline-warning mt-3">
+                            <i class="fas fa-phone me-2"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon mx-auto">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4 class="text-warning mb-3">Email Address</h4>
+                        <p style="color: #aaa;" class="mb-3">cekdikautocare@gmail.com</p>
+                        <p style="color: #888; font-size: 0.9rem;">Response within 24 hours for all email inquiries and quote requests.</p>
+                        <a href="mailto:cekdikautocare@gmail.com" class="btn btn-outline-warning mt-3">
+                            <i class="fas fa-envelope me-2"></i> Send Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map -->
+    <section class="py-5" style="background: #111;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="contact-form">
+                        <h2 class="text-warning mb-4">SEND US A MESSAGE</h2>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label text-light">Full Name *</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label text-light">Phone Number *</label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label text-light">Email Address *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label text-light">Subject</label>
+                                <select class="form-select" id="subject">
+                                    <option value="general">General Inquiry</option>
+                                    <option value="service">Service Information</option>
+                                    <option value="quote">Request Quote</option>
+                                    <option value="complaint">Feedback/Complaint</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label text-light">Message *</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <div class="mb-4 form-check">
+                                <input type="checkbox" class="form-check-input" id="newsletter">
+                                <label class="form-check-label" for="newsletter" style="color: #aaa;">
+                                    Subscribe to our newsletter for tips and promotions
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-warning btn-lg w-100">
+                                <i class="fas fa-paper-plane me-2"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="text-warning mb-4">FIND US</h2>
+                    <div class="map-container mb-4">
+                        <!-- Embedded Google Map -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254051.84512089464!2d101.97654804665075!3d5.7762484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b69b4e14ea6e2b%3A0x8d7b8c3815fc5005!2sCEK%20DIK%20AUTO%20CARE!5e0!3m2!1sen!2sus!4v1768423428838!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            
+                        </iframe>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h4 class="text-warning mb-3">OPENING HOURS</h4>
+                        <ul class="opening-hours">
+                            <li>
+                                <strong style="color: #FFD700;">Monday - Friday:</strong> 
+                                <span class="float-end">9:00 AM - 7:00 PM</span>
+                            </li>
+                            <li>
+                                <strong style="color: #FFD700;">Saturday:</strong> 
+                                <span class="float-end">9:00 AM - 6:00 PM</span>
+                            </li>
+                            <li>
+                                <strong style="color: #FFD700;">Sunday:</strong> 
+                                <span class="float-end">10:00 AM - 5:00 PM</span>
+                            </li>
+                            <li>
+                                <strong style="color: #FFD700;">Public Holidays:</strong> 
+                                <span class="float-end text-warning">By Appointment Only</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-4 p-3 rounded" style="background: linear-gradient(145deg, #0f0f0f, #1a1a1a); border: 1px solid #333;">
+                        <h5 class="text-warning mb-2"><i class="fas fa-exclamation-triangle me-2"></i>Emergency Service</h5>
+                        <p class="mb-0" style="color: #aaa;">For emergency services after hours, please call: <strong class="text-warning">+60 12-345 6789</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="py-5" style="background: #0a0a0a;">
+        <div class="container">
+            <div class="booking-form-container" id="booking">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="text-warning mb-3">BOOK AN APPOINTMENT</h2>
+                        <p class="lead mb-4" style="color: #ccc;">Schedule your car detailing service with us today</p>
+                        <ul class="list-unstyled mb-4" style="color: #aaa;">
+                            <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i> Flexible scheduling with online booking</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i> Mobile service available at your location</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i> Confirmation within 24 hours</li>
+                            <li><i class="fas fa-check-circle text-warning me-2"></i> Free cancellation up to 24 hours before</li>
+                        </ul>
+                        <div class="mt-4">
+                            <h5 class="text-warning mb-3">Popular Time Slots</h5>
+                            <div>
+                                <span class="time-slot">9:00 AM</span>
+                                <span class="time-slot">10:00 AM</span>
+                                <span class="time-slot">11:00 AM</span>
+                                <span class="time-slot">2:00 PM</span>
+                                <span class="time-slot">3:00 PM</span>
+                                <span class="time-slot">4:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="p-4 rounded" style="background: #000; border: 1px solid #333;">
+                            <form id="bookingForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="bookingName" class="form-label text-light">Name *</label>
+                                        <input type="text" class="form-control" id="bookingName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="bookingPhone" class="form-label text-light">Phone *</label>
+                                        <input type="tel" class="form-control" id="bookingPhone" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="bookingService" class="form-label text-light">Service Required *</label>
+                                    <select class="form-select" id="bookingService" required>
+                                        <option value="">Select a service</option>
+                                        <option value="exterior">Exterior Detailing (RM 50+)</option>
+                                        <option value="interior">Interior Cleaning (RM 70+)</option>
+                                        <option value="full">Complete Detailing (RM 150)</option>
+                                        <option value="engine">Engine Cleaning (RM 40)</option>
+                                        <option value="other">Other Service</option>
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="bookingDate" class="form-label text-light">Preferred Date *</label>
+                                        <input type="date" class="form-control" id="bookingDate" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="bookingTime" class="form-label text-light">Preferred Time *</label>
+                                        <select class="form-select" id="bookingTime" required>
+                                            <option value="">Select time</option>
+                                            <option value="09:00">9:00 AM</option>
+                                            <option value="10:00">10:00 AM</option>
+                                            <option value="11:00">11:00 AM</option>
+                                            <option value="12:00">12:00 PM</option>
+                                            <option value="14:00">2:00 PM</option>
+                                            <option value="15:00">3:00 PM</option>
+                                            <option value="16:00">4:00 PM</option>
+                                            <option value="17:00">5:00 PM</option>
+                                        </select>
